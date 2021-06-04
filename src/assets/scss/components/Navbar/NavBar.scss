@@ -1,0 +1,68 @@
+.navigation{
+    width: 15%;
+    background-color: $decoratedDarkenViolet;
+    color: #fff;
+    height: 100vh;
+    position: relative;
+    min-width: 200px;
+    width: 10%;
+    overflow: hidden;
+
+    &_hidden{
+        width: 2.5%;
+        min-width: 56px;
+
+        .navigation__logo{
+            @include adaptiv-font(20, 18)
+        }
+
+        .navigation__list-of-links{
+            padding-left: 10%;
+        }
+    }
+    
+    &__logo{
+        height: 25%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include adaptiv-font(30, 24);
+    }
+
+    &__icon{
+        margin-right: 12px;
+        width: 25px;
+        height: 25px;
+        transition: .2s;
+        flex-shrink: 0;
+    }
+    
+    &__list-of-links{
+        padding-left: 20%;
+    }
+
+    &__link-a{
+        display: block;
+        width: 100%;
+        padding: 15px 0;
+        padding-left: 14px;
+        @include adaptiv-font(14, 18);
+        transition: .3s ease-in-out;
+        border-radius: 20px 0 0 20px;
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+
+        &:hover{
+           color: $accent;
+        }
+    }
+
+    &__link-a_active{
+        background-color: $accent;
+
+        &:hover{
+            color: $white;
+        }
+    }
+}

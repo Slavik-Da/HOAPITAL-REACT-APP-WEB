@@ -2,6 +2,16 @@
 @import './vars';
 @import './mixins/adaptive-font.scss';
 
+
+//base styles
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color:  transparent; 
+}
+
 .h1{
     font-size: $h1;
 }
@@ -23,13 +33,47 @@
 }
 
 body{
-    font-family: $defaultFont ;
+    font-family: $defaultFont;
+    overflow: hidden;
 }
 
+#app{
+    width: 100%;
+    display: flex;
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+//end base styles
+
+//blocks
+
+@import './blocks/Content.scss';
 
 
 
+//end blocks 
 
+
+//pages
+
+
+//end pages
+
+
+
+//components
+@import './components/Navbar/NavBar.scss';
+
+
+//end components
 
 
 @import './media.scss';
