@@ -6,39 +6,58 @@
     position: relative;
     min-width: 200px;
     width: 10%;
-    overflow: hidden;
+    transition: .4s ease-in-out;
+    
+    &__tablet-toggle-btn{
+        display: none;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: $white;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 22%;
+        right: -10px;
+        transition: .3s ease-out;
 
-    &_hidden{
-        width: 2.5%;
-        min-width: 56px;
-
-        .navigation__logo{
-            @include adaptiv-font(20, 18)
-        }
-
-        .navigation__list-of-links{
-            padding-left: 10%;
+        &_active{
+            transform: rotate(180deg);
         }
     }
-    
+
+    &__tablet-toggle-btn-icon{
+        fill: #484848;
+        width: 5px;
+        height: 10px;
+    }
+
     &__logo{
         height: 25%;
         display: flex;
         justify-content: center;
         align-items: center;
         @include adaptiv-font(30, 24);
+        transition: .3s ease-in;
     }
 
     &__icon{
         margin-right: 12px;
         width: 25px;
         height: 25px;
-        transition: .2s;
+        transition: .3s ease-in-out;
         flex-shrink: 0;
+    }
+
+    &__link{
+        &:hover .navigation__link-a{
+            color: $accent;
+        }
     }
     
     &__list-of-links{
         padding-left: 20%;
+        overflow: hidden;
     }
 
     &__link-a{
@@ -52,17 +71,13 @@
         margin-top: 10px;
         display: flex;
         align-items: center;
-
-        &:hover{
-           color: $accent;
-        }
     }
 
     &__link-a_active{
         background-color: $accent;
 
         &:hover{
-            color: $white;
+            color: $white !important;
         }
     }
 }

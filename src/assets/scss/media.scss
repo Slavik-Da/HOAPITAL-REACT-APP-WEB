@@ -1,0 +1,121 @@
+@media screen and (min-width: 1200px){
+
+}
+
+@media screen and (max-width: 992px){
+
+}
+
+@media screen and (max-width: 768px){
+    .navigation{
+        &__tablet-toggle-btn{
+            display: flex;
+        }
+
+        &_tablet-hidden{
+            width: 2.5%;
+            min-width: 56px;
+            padding: 2% 0;
+    
+            .navigation__logo{
+                @include adaptiv-font(20, 18)
+            }
+    
+            .navigation__list-of-links{
+                padding-left: 10%;
+            }
+    
+            .navigation__link{
+                &:hover .navigation__icon{
+                    stroke: $white;
+                    fill: $white;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px){
+    #app{
+        display: flex;
+        flex-direction: column;
+    }
+
+    body{
+        overflow: scroll;
+    }
+
+    .content{
+        min-height: 100vh;
+        padding: 4%;
+    }
+
+    .navigation{
+        &_mobile-opened{
+            .navigation__list-of-links{
+                padding-left: 20%;
+                padding-top: 20%;
+                height: 100vh !important;
+            }
+
+            .navigation__link{
+                opacity: 1 !important;
+                transform: translateX(0) !important;
+            }
+        }
+
+        &_mobile-bar{
+            height: auto;
+            width: 100% !important;
+            position: static;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding:4% !important;
+    
+            .navigation{
+                &__tablet-toggle-btn{
+                    display: none;
+                }
+    
+                &__toggle-btn-mobile{
+                    width: 25px;
+                    height: 25px;
+                    background-color: #000;
+                    z-index: 100;
+                    position: relative;
+                }
+
+                &__link-a{
+                    width:100%;
+                }
+
+                &__link{
+                    opacity: 0;
+                    transform: translateX(100%);
+                    transition: .3s ease-in ;
+                }
+                
+                &__list-of-links{
+                    display: block;
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 0;
+                    background-color: $decoratedDarkenViolet;
+                    z-index: 1;
+                    transition: .4s ease-in-out;
+                }
+    
+                &__logo{
+                    height: auto;
+                    z-index: 100;
+                    position: relative;
+                    font-size: 1.2em;
+                }
+            }
+        }
+    }
+}
+

@@ -32,9 +32,17 @@
     font-size: $h5;
 }
 
+.btn{
+    cursor: pointer;
+}
+
 body{
     font-family: $defaultFont;
     overflow: hidden;
+}
+
+body.opened-navbar{
+    overflow: hidden !important;
 }
 
 #app{

@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import React from 'react';
 import {Redirect, Route, Switch} from 'react-router-dom';
 import { Allerts } from '../../pages/Allerts';
@@ -7,7 +8,7 @@ import { Stuff } from '../../pages/Stuff';
 
 export const Routes = () => {
     return (
-        <div className="content">
+        <main className="content">
             <Switch>
                 <Route path={'/dashboard'}>
                     <Dashboard/>
@@ -23,6 +24,6 @@ export const Routes = () => {
                 </Route>
                 <Redirect to={'/dashboard'} />
             </Switch>
-        </div>
+        </main>
     );
 }
