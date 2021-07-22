@@ -79,6 +79,10 @@
                     color: $greyLightDecorated
                 }
 
+                &__control-item{
+                    cursor: pointer;
+                }
+
                 &__control-count{
                     color: $accentOrange;
                 }
