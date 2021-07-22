@@ -3,19 +3,30 @@ import { DoctorControlPanel } from './components/DoctorPanel/DoctorControlPanel'
 import { DoctorLine } from './components/DoctorLine/DoctorLine';
 import { Room } from './components/Room/Room';
 import { EnumRoomPriorityIndexs, EnumRoomStatus } from '../../models/Room/roomModel';
+import { typedUseSelector } from '../../redux/store';
 
 
 
 export const Dashboard = () => {
-    
+    const {menuVisible} = typedUseSelector(state => state.appState);
+
+    const roomsCollectionClasses = (
+        menuVisible ? 
+            'rooms-collection rooms-collection_smaller' : 'rooms-collection'
+    );
+
+
     return (
         <section className='page page-dashboard'>
             <DoctorLine>
                 <DoctorControlPanel 
                     fullName={'Benedict Cumberbatch'} 
                     roleInHospital={'Therapist'}
+                    menuVisible={menuVisible}
+                    stopLineFunc={() => {}}
+                    resetFunc={() => {}}
                 />
-                <ul className="rooms-collection">
+                <ul className={roomsCollectionClasses}>
                     <Room
                         status={EnumRoomStatus.EMPTY}
                         priorityIndex={EnumRoomPriorityIndexs.R}

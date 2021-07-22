@@ -15,11 +15,11 @@ export const Room : React.FC<RoomModel> = ({
                     <div className="room__name center">
                         {name}
                     </div>
-                    <div className="room__priority-index">
+                    <div className="room__priority-index center">
                         {priorityIndex}
                     </div>
                 </div>
-                <div className="room__time-in-room">
+                <div className="room__time-in-room center">
                     {timer}
                 </div>
             </div>

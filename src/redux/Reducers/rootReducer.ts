@@ -1,7 +1,11 @@
+import { combineReducers } from 'redux';
+import { appReducer } from './app';
+import {UiState} from './interfaces/app';
 
-export const rootReducer = (state: any, action: any) => {
-    switch(action.type){
-        default:
-            return state;
-    }
+export interface rootReducer{
+    appState: UiState
 };
+
+export const rootReducer = combineReducers({
+    appState: appReducer
+});

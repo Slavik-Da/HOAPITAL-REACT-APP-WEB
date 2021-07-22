@@ -49,6 +49,8 @@
         @include adaptiv-font(10, 8)
     }
 
+
+
     .page-dashboard{
         .doctor-line{
             .doctor-control-panel{
@@ -58,6 +60,31 @@
     }
 }
 
+@media screen and (min-height: 550px){
+    .page-dashboard{
+        .doctor-line{
+            .rooms-collection{
+                .room {
+                    max-height: 150px;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen  and (max-width: 1300px) {
+    .page-dashboard{
+        .doctor-line{
+            .rooms-collection{
+                .room {
+                    height: 80%;
+                    min-width: 150px;
+                }
+            }
+        }
+    }
+}
 
 
 @media screen and (max-width: 1200px){
@@ -83,6 +110,48 @@
                 &:hover .navigation__icon{
                     stroke: $white;
                     fill: $white;
+                }
+            }
+        }
+        
+    }
+
+    .page-dashboard{
+        .doctor-line{
+            padding: 1% 1%;
+            .rooms-collection{
+                margin-left: 1%;
+
+                .room {
+                    max-height: 100px;
+                    max-height: max-content;
+                    height: 60%;
+
+                    &:first-child{
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 992px){
+    .page-dashboard{
+        .doctor-line{
+            padding: 1% 1%;
+            .rooms-collection{
+                margin-left: 1%;
+
+                .room {
+                    max-height: 100px;
+                    max-height: max-content;
+                    height: 60%;
+
+                    &:first-child{
+                        margin-left: 0;
+                    }
                 }
             }
         }

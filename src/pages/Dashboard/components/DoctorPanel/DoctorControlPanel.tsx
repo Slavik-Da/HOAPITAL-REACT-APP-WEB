@@ -6,12 +6,20 @@ interface DoctorControlProps{
     fullName: string,
     roleInHospital: string,
     resetFunc?: (id: string) => void,
-    stopLineFunc?: (id: string) => void
+    stopLineFunc?: (id: string) => void,
+    menuVisible: boolean
 }
 
-export const DoctorControlPanel = ({fullName, roleInHospital, resetFunc, stopLineFunc}: DoctorControlProps) => {
+export const DoctorControlPanel : React.FC<DoctorControlProps> = ({
+    fullName, roleInHospital, resetFunc, stopLineFunc, menuVisible
+}) => {
+    const controlPannelClasses = (
+        menuVisible ?
+            'doctor-control-panel doctor-control-panel_bigger' : 'doctor-control-panel'
+    );
+
     return (
-        <div className='doctor-control-panel'>
+        <div className={controlPannelClasses}>
             <div className="doctor-control-panel__content-wrapper">
                 <div className="doctor-control-panel__content-block doctor-control-panel__content-block_top">
                     <div className="doctor-control-panel__doctor-full-name">

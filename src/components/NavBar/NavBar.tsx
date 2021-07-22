@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import {ReactComponent as DashboardIcon} from './img/Dashboard.svg';
 import {ReactComponent as StaffIcon} from './img/Stuff.svg';
@@ -7,14 +7,19 @@ import {ReactComponent as SequenceIcon} from './img/Sequence.svg';
 import {ReactComponent as ArrowIcon} from './img/Arrow.svg';
 import { generateKey } from '../../utilits';
 import {AppPages} from '../../routes/index';
+import { dispatch, typedUseSelector } from '../../redux/store';
+import { switchMenuVisible } from '../../redux/actions/app';
+
 
 const width = window.screen.width;
 
 export const NavBar = () => {
+    const {menuVisible} = typedUseSelector(state => state.appState);
+
     const activeLinkClass      = 'navigation__link-a_active';
     const classOfLink          = 'navigation__link-a';
     const classOfIcon          = 'navigation__icon';
-    const whenNavBarOpenedBody = 'opened-navbar'
+    const whenNavBarOpenedBody = 'opened-navbar';
 
     const whiteColor = '#fff';
     const accentColor = '#6AC7BE';
@@ -31,22 +36,22 @@ export const NavBar = () => {
     const allertsColor   = returnColor(pathname === AppPages['/allerts'].route);
     const sequenceColor  = returnColor(pathname === AppPages['/sequence'].route);
 
-    const [navigationVisable, setVisible] = useState(false);
 
     const navigationClasses = [
         'navigation',
-        !navigationVisable ? 'navigation_tablet-hidden' : '',
+        !menuVisible ? 'navigation_tablet-hidden' : '',
         'navigation_mobile-bar',
-        navigationVisable ? 'navigation_mobile-opened' : '',
+        menuVisible ? 'navigation_mobile-opened' : '',
     ];
 
     const toggleBtnTabletClasses = [
         'navigation__tablet-toggle-btn',
-        navigationVisable ? 'navigation__tablet-toggle-btn_active': '',
+        menuVisible ? 'navigation__tablet-toggle-btn_active': '',
     ];
 
     const toggleMenuVisible = () => {
-        setVisible(prev => !prev);
+        dispatch(switchMenuVisible())
+
         const body = document.querySelector('body');
 
 
