@@ -1,0 +1,30 @@
+.btn{
+    padding: 0px 10px;
+    @include adaptiv-font(12, 10);
+    transition: .15s ease-in;
+    cursor: pointer;
+
+    &_light-green{
+        border-radius: 20px;
+        border: 1px solid $accent;
+        color: $accent;
+
+        &:hover{
+            background-color: rgba($color: $greenDarkenDecorated, $alpha: .5);
+            color: $white;
+            border: 1px solid $greenDarkenDecorated;
+        }
+    }
+
+    &_orange-long{
+        border-radius: 20px;
+        border: 1px solid $accentOrange;
+        color: $accentOrange;
+
+        &:hover{
+            background-color: rgba($color: $orangeDecorated, $alpha: .5);
+            color: $white;
+            border: 1px solid $orangeDecorated;
+        }
+    }
+}

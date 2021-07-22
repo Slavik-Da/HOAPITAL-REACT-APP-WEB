@@ -1,26 +1,31 @@
-import { motion } from 'framer-motion';
 import React from 'react';
 import {Redirect, Route, Switch} from 'react-router-dom';
-import { Allerts } from '../../pages/Allerts';
-import { Dashboard } from '../../pages/Dashboard';
-import { Sequence } from '../../pages/Sequence';
-import { Stuff } from '../../pages/Stuff';
+import {AppPages} from '../../routes/index';
+
 
 export const Routes = () => {
     return (
         <main className="content">
             <Switch>
-                <Route path={'/dashboard'}>
-                    <Dashboard/>
+                <Route path={AppPages['/dashboard'].route}>
+                    {
+                        AppPages['/dashboard'].component
+                    }
                 </Route> 
-                <Route path={'/stuff'} >
-                    <Stuff/>
+                <Route path={AppPages['/stuff'].route} >
+                    {
+                        AppPages['/stuff'].component
+                    }
                 </Route>
-                <Route path={'/allerts'} >
-                    <Allerts/>
+                <Route path={AppPages['/allerts'].route} >
+                    {
+                        AppPages['/allerts'].component
+                    }
                 </Route>
-                <Route path={'/sequence'}>
-                    <Sequence/>
+                <Route path={AppPages['/sequence'].route}>
+                    {
+                        AppPages['/sequence'].component
+                    }
                 </Route>
                 <Redirect to={'/dashboard'} />
             </Switch>

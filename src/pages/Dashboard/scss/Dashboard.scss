@@ -1,0 +1,91 @@
+.page-dashboard{
+    display: grid;
+    min-height: 100% ;
+    grid-template-columns: 1fr;
+    gap: 10px 0;
+
+    .doctor-line{
+        background-color: #F6F6FF;
+        height: 31vh;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        display: flex;    
+        align-items: center;
+        padding: 3% 4%;
+
+        
+
+        &::-webkit-scrollbar{
+            height: 6px;
+            background-color: $white;    
+        }
+    
+        &::-webkit-scrollbar-thumb {
+            background-color: $decoratedGrey;
+        }
+
+        .doctor-control-panel{
+            height: 100%;
+            width: 30%;
+            border-right: $lightGreenDecorated solid 1px;
+            @include adaptiv-font(18, 15);
+
+            &__content-wrapper{
+                padding-top: 5%;
+            }
+
+            &__reset-btn{
+                right: 0;
+                top: 0;
+                position: absolute;
+            }
+
+            &__doctor-role{
+                margin-top: 3%;
+                color: $blackLigthDecorated;
+            }
+
+            &__doctor-full-name{
+               width: 50%;
+               line-height: 1.7rem;
+            }
+
+            &__content-block_top{
+                padding-bottom: 5%;
+                border-bottom: $lightGreenDecorated solid 1px;
+                width: 95%;
+                position: relative;
+            }
+
+            &__content-block_bottom{
+                display: flex;
+                margin-top: 10px;
+                position: relative;
+                width: 90%;
+            }
+
+            &__stop-the-line-btn{
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+
+            .control-block{
+                display: flex;
+                width: 50%;
+                justify-content: space-between;
+
+                &__decorated-text{
+                    color: $greyLightDecorated
+                }
+
+                &__control-count{
+                    color: $accentOrange;
+                }
+            }
+        }
+    }
+
+
+}
+

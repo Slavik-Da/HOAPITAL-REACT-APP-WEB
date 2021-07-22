@@ -13,7 +13,8 @@
 }
 
 .h1{
-    font-size: $h1;
+    @include adaptiv-font(24, 18);
+    font-weight: 500;
 }
 
 .h2{
@@ -22,6 +23,7 @@
 
 .h3{
     font-size: $h3;
+    font-weight: 500;
 }
 
 .h4{
@@ -71,6 +73,7 @@ li{
 
 
 //pages
+@import '../../pages/Dashboard/scss/Dashboard.scss';
 
 
 //end pages
@@ -78,8 +81,8 @@ li{
 
 
 //components
-@import './components/Navbar/NavBar.scss';
-
+@import '../../components/NavBar/scss/NavBar.scss';
+@import '../../components/Button/scss/Button.scss';
 
 //end components
 

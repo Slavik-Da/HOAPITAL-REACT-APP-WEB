@@ -1,19 +1,16 @@
 import React, { useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
-import {ReactComponent as DashboardIcon} from '../../assets/img/NavigationIcons/Dashboard.svg';
-import {ReactComponent as StaffIcon} from '../../assets/img/NavigationIcons/Stuff.svg';
-import {ReactComponent as AllertsIcon} from '../../assets/img/NavigationIcons/Allerts.svg';
-import {ReactComponent as SequenceIcon} from '../../assets/img/NavigationIcons/Sequence.svg';
-import {ReactComponent as ArrowIcon} from '../../assets/img/NavigationIcons/Arrow.svg';
-
-interface NavBarProps{
-    role?: string,
-    isAuth?: boolean
-}
+import {ReactComponent as DashboardIcon} from './img/Dashboard.svg';
+import {ReactComponent as StaffIcon} from './img/Stuff.svg';
+import {ReactComponent as AllertsIcon} from './img/Allerts.svg';
+import {ReactComponent as SequenceIcon} from './img/Sequence.svg';
+import {ReactComponent as ArrowIcon} from './img/Arrow.svg';
+import { generateKey } from '../../utilits';
+import {AppPages} from '../../routes/index';
 
 const width = window.screen.width;
 
-export const NavBar = ({role, isAuth}: NavBarProps) => {
+export const NavBar = () => {
     const activeLinkClass      = 'navigation__link-a_active';
     const classOfLink          = 'navigation__link-a';
     const classOfIcon          = 'navigation__icon';
@@ -24,21 +21,15 @@ export const NavBar = ({role, isAuth}: NavBarProps) => {
 
     const {pathname} = useLocation();
 
-    const routes = {
-        Dashboard: '/dashboard',
-        Staff: '/stuff',
-        Allerts: '/allerts',
-        Sequence: '/sequence'
-    };
 
     const returnColor = (expression: boolean) => expression ? whiteColor : accentColor;
     
     //trues colors
 
-    const dashboardColor = returnColor(pathname === routes.Dashboard);
-    const staffColor     = returnColor(pathname === routes.Staff);
-    const allertsColor   = returnColor(pathname === routes.Allerts);
-    const sequenceColor  = returnColor(pathname === routes.Sequence);
+    const dashboardColor = returnColor(pathname === AppPages['/dashboard'].route);
+    const staffColor     = returnColor(pathname === AppPages['/stuff'].route);
+    const allertsColor   = returnColor(pathname === AppPages['/allerts'].route);
+    const sequenceColor  = returnColor(pathname === AppPages['/sequence'].route);
 
     const [navigationVisable, setVisible] = useState(false);
 
@@ -52,7 +43,6 @@ export const NavBar = ({role, isAuth}: NavBarProps) => {
     const toggleBtnTabletClasses = [
         'navigation__tablet-toggle-btn',
         navigationVisable ? 'navigation__tablet-toggle-btn_active': '',
-        'btn'
     ];
 
     const toggleMenuVisible = () => {
@@ -68,7 +58,7 @@ export const NavBar = ({role, isAuth}: NavBarProps) => {
     const menuLinks = [
         {
             name: 'Dashboard',
-            route: routes.Dashboard,
+            route: AppPages['/dashboard'].route,
             Icon: DashboardIcon,
             propsOfIcon: {
                 stroke: dashboardColor
@@ -76,7 +66,7 @@ export const NavBar = ({role, isAuth}: NavBarProps) => {
         },
         {
             name: 'Stuff',
-            route: routes.Staff,
+            route: AppPages['/stuff'].route,
             Icon: StaffIcon,
             propsOfIcon: {
                 fill: staffColor
@@ -84,7 +74,7 @@ export const NavBar = ({role, isAuth}: NavBarProps) => {
         },
         {
             name: 'Allerts',
-            route: routes.Allerts,
+            route: AppPages['/allerts'].route,
             Icon: AllertsIcon,
             propsOfIcon: {
                 stroke: allertsColor,
@@ -93,7 +83,7 @@ export const NavBar = ({role, isAuth}: NavBarProps) => {
         },
         {
             name: 'Sequence',
-            route: routes.Sequence,
+            route: AppPages['/sequence'].route,
             Icon: SequenceIcon,
             propsOfIcon: {
                 fill: sequenceColor
@@ -107,7 +97,7 @@ export const NavBar = ({role, isAuth}: NavBarProps) => {
 
         return menuLinks.map(({name, route, Icon, propsOfIcon}) => {
             return (
-                <li className="navigation__link" onClick={isMobileMenu}>
+                <li className="navigation__link" key={generateKey(route)} onClick={isMobileMenu}>
                     <NavLink className={classOfLink} to={route} activeClassName={activeLinkClass}>
                         <Icon className={classOfIcon} {...propsOfIcon} />
                         {name}
@@ -124,7 +114,7 @@ export const NavBar = ({role, isAuth}: NavBarProps) => {
                 Logo
             </div>
             <div className={toggleBtnTabletClasses.join(' ')} onClick={toggleMenuVisible} >
-                <ArrowIcon className={'navigation__tablet-toggle-btn-icon'} />
+                <ArrowIcon  className={'navigation__tablet-toggle-btn-icon'} />
             </div>
             <div className="btn navigation__toggle-btn-mobile" onClick={toggleMenuVisible}>
 

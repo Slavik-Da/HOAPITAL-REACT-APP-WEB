@@ -1,17 +1,71 @@
-@media screen and (min-width: 1200px){
-
+@media screen and (max-width: 1440px){
+    .page-dashboard{
+        .doctor-line{
+            .doctor-control-panel{
+                max-height: 150px;
+            }
+        }
+    }
 }
 
-@media screen and (max-width: 992px){
-
+@media screen and (max-height: 820px){
+    .page-dashboard{
+        .doctor-line{
+            padding: 1% 4%;
+        }
+    }
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-height: 600px){
+    .page-dashboard{
+        .doctor-line{
+            padding: .5% 4%;
+        }
+    }
+
+    .page-dashboard{
+        .doctor-line{
+            .doctor-control-panel{
+                @include adaptiv-font(11, 10)
+            }
+        }
+    }
+}
+
+@media screen and (max-height: 550px){
+    .h1{
+        @include adaptiv-font(18, 10)
+    }
+
+    .h3{
+        @include adaptiv-font(12, 10)
+    }
+
+    .page-dashboard .doctor-line .doctor-control-panel__doctor-full-name{
+        line-height: 1.2rem;
+    }
+
+    .btn{
+        @include adaptiv-font(10, 8)
+    }
+
+    .page-dashboard{
+        .doctor-line{
+            .doctor-control-panel{
+                @include adaptiv-font(12, 10)
+            }
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 1200px){
     .navigation{
         &__tablet-toggle-btn{
             display: flex;
         }
-
+    
         &_tablet-hidden{
             width: 2.5%;
             min-width: 56px;
@@ -33,6 +87,14 @@
             }
         }
     }
+}
+
+@media screen and (max-width: 992px){
+
+}
+
+@media screen and (max-width: 768px){
+
 }
 
 @media screen and (max-width: 576px){

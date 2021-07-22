@@ -1,9 +1,5 @@
-interface BaseAction{
-    type: string,
-    payload?:any 
-}
 
-export const rootReducer = (state: any, action: BaseAction) => {
+export const rootReducer = (state: any, action: any) => {
     switch(action.type){
         default:
             return state;
