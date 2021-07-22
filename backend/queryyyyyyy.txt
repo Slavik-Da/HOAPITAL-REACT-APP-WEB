@@ -1,0 +1,15 @@
+mutation {
+  editDoctor (id:2, input: {
+    name: "NEEEEW DOCTEUR"
+    specialization:"HZ"
+    email: "PRIVET@gmail.com"
+    phoneNumber: "055165604"
+  }) {
+    name, id
+  }
+}
+
+
+
+
+
