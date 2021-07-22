@@ -12,7 +12,7 @@ export const Room : React.FC<RoomModel> = ({
         <li className="room">
             <div className="room__header">
                 <div className="room__group">
-                    <div className="room__name">
+                    <div className="room__name center">
                         {name}
                     </div>
                     <div className="room__priority-index">

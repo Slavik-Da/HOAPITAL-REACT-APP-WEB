@@ -15,7 +15,28 @@ export const Dashboard = () => {
                     fullName={'Benedict Cumberbatch'} 
                     roleInHospital={'Therapist'}
                 />
-                <ul className="rooms-collections">
+                <ul className="rooms-collection">
+                    <Room
+                        status={EnumRoomStatus.EMPTY}
+                        priorityIndex={EnumRoomPriorityIndexs.R}
+                        name='1b'
+                        timer={'00:00'}
+                    />
+
+                    <Room
+                        status={EnumRoomStatus.EMPTY}
+                        priorityIndex={EnumRoomPriorityIndexs.R}
+                        name='1b'
+                        timer={'00:00'}
+                    />
+
+                    <Room
+                        status={EnumRoomStatus.EMPTY}
+                        priorityIndex={EnumRoomPriorityIndexs.R}
+                        name='1b'
+                        timer={'00:00'}
+                    />
+
                     <Room
                         status={EnumRoomStatus.EMPTY}
                         priorityIndex={EnumRoomPriorityIndexs.R}
