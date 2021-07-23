@@ -56,9 +56,6 @@ export const Dashboard = () => {
                     />
                 </ul>
             </DoctorLine>
-            <DoctorLine/>
-            <DoctorLine/>
-            <DoctorLine/>
         </section>
     );
 }

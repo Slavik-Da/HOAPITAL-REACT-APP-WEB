@@ -19,6 +19,11 @@
             width: 30%;
             border-right: $lightGreenDecorated solid 1px;
             @include adaptiv-font(18, 15);
+            transition: .2s ease;
+
+            &_bigger{
+                width: 40%;
+            }
 
             &__content-wrapper{
                 padding-top: 5%;
@@ -85,6 +90,11 @@
             height: 100%;
             align-items: center;
             width: 70%;
+            transition: .2s ease;
+
+            &_smaller{
+                width: 60%;
+            }
 
             .room{
                 width: 25%;
@@ -99,9 +109,10 @@
                 position: relative;
                 transition: .11s ease-in-out;
                 cursor: pointer;
+                box-sizing: content-box;
 
                 &:hover{
-                    border: 2px solid $orangeDecorated;
+                    border: 3px solid $orangeDecorated;
                 }
 
                 &__header{
