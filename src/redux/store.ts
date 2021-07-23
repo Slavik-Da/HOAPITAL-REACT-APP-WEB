@@ -1,6 +1,6 @@
 import { useSelector , TypedUseSelectorHook} from "react-redux";
 import { createStore, compose, applyMiddleware } from "redux";
-import { rootReducer } from "./reducers/rootReducer";
+import { rootReducer } from "./Reducers/rootReducer";
 
 const composeEnhancers =
   typeof window === 'object' &&
