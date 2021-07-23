@@ -8,6 +8,15 @@
     }
 }
 
+
+@media screen and (min-height: 600px){
+    .page-dashboard{
+        .doctor-line{
+           
+        }
+    }
+}
+
 @media screen and (max-height: 820px){
     .page-dashboard{
         .doctor-line{
@@ -86,6 +95,18 @@
     }
 }
 
+@media screen  and (max-width: 1020px) {
+    .page-dashboard{
+        .doctor-line{
+            .rooms-collection{
+                .room {
+                    min-width: 20.8vw;
+                }
+            }
+        }
+    }
+}
+
 
 @media screen and (max-width: 1200px){
     .navigation{
@@ -118,14 +139,13 @@
 
     .page-dashboard{
         .doctor-line{
-            padding: 1% 1%;
+            padding: 1% 2%;
             .rooms-collection{
                 margin-left: 1%;
 
                 .room {
-                    max-height: 100px;
                     max-height: max-content;
-                    height: 60%;
+                    height: 80%;
 
                     &:first-child{
                         margin-left: 0;
@@ -140,14 +160,22 @@
 @media screen and (max-width: 992px){
     .page-dashboard{
         .doctor-line{
-            padding: 1% 1%;
+            padding: 1% 2%;
+            min-height: 50vh;
+
+
+            .doctor-control-panel{
+                width: 45%;
+            }
+
+
             .rooms-collection{
                 margin-left: 1%;
+                width: 55%;
 
                 .room {
-                    max-height: 100px;
-                    max-height: max-content;
-                    height: 60%;
+                    height: 70%;
+                    min-width: 24.9vw;
 
                     &:first-child{
                         margin-left: 0;
@@ -164,6 +192,43 @@
 
 @media screen and (max-width: 768px){
 
+    .page-dashboard{
+        display: block;
+
+        .doctor-line{
+            height: auto;
+            flex-direction: column;
+            padding-bottom: 5vw;
+
+            .doctor-control-panel{
+                width: 100%;
+                border-right: none;
+
+                &__content-block_top{
+                    width: 100%;
+                }
+            }
+
+            .rooms-collection{
+                width: 100%;
+                flex-wrap: wrap;
+                margin-top: 30px;
+                margin-left: 0;
+                justify-content: center;
+
+                .room{
+                    min-width: 30vw;
+                    min-height:30vw;
+                    margin-left: 0;
+                    margin-top: 3vw;
+
+                    &:nth-child(2n){
+                        margin-left: 3vw;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 576px){
@@ -244,6 +309,17 @@
                     z-index: 100;
                     position: relative;
                     font-size: 1.2em;
+                }
+            }
+        }
+    }
+
+    .page-dashboard{
+        .doctor-line{
+            .rooms-collection{
+                .room{
+                    min-width: 40vw;
+                    min-height: 40vw;
                 }
             }
         }

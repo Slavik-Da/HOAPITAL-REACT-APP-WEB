@@ -56,7 +56,44 @@ export const Dashboard = () => {
                     />
                 </ul>
             </DoctorLine>
-            <DoctorLine/>
+            <DoctorLine>
+                <DoctorControlPanel 
+                    fullName={'Benedict Cumberbatch'} 
+                    roleInHospital={'Therapist'}
+                    menuVisible={menuVisible}
+                    stopLineFunc={() => {}}
+                    resetFunc={() => {}}
+                />
+                <ul className={roomsCollectionClasses}>
+                    <Room
+                        status={EnumRoomStatus.EMPTY}
+                        priorityIndex={EnumRoomPriorityIndexs.R}
+                        name='1b'
+                        timer={'00:00'}
+                    />
+
+                    <Room
+                        status={EnumRoomStatus.EMPTY}
+                        priorityIndex={EnumRoomPriorityIndexs.R}
+                        name='1b'
+                        timer={'00:00'}
+                    />
+
+                    <Room
+                        status={EnumRoomStatus.EMPTY}
+                        priorityIndex={EnumRoomPriorityIndexs.R}
+                        name='1b'
+                        timer={'00:00'}
+                    />
+
+                    <Room
+                        status={EnumRoomStatus.EMPTY}
+                        priorityIndex={EnumRoomPriorityIndexs.R}
+                        name='1b'
+                        timer={'00:00'}
+                    />
+                </ul>
+            </DoctorLine>
             <DoctorLine/>
             <DoctorLine/>
         </section>
