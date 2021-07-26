@@ -1,5 +1,4 @@
 .page-dashboard{
-    display: grid;
     min-height: 100% ;
     grid-template-columns: 1fr;
     gap: 10px 0;
@@ -110,6 +109,10 @@
                 transition: .11s ease-in-out;
                 cursor: pointer;
                 box-sizing: content-box;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
 
                 &:hover{
                     border: 3px solid $orangeDecorated;
@@ -122,6 +125,7 @@
                     border-top-left-radius: 20px;  
                     height: 20%;
                     padding-right: 1%;
+                    width: 100%;
                 }
 
                 &__priority-index{
@@ -147,13 +151,118 @@
                     border-bottom-right-radius: 20px; 
                     border-top-left-radius: 20px;   
                     font-size: .7em;
-                    font-weight: 700;
+                    font-weight: 500;
                 }
 
                 &__time-in-room{
                     font-size: .6em;
                     height: 100%;
                 }
+
+
+                .status-picker{
+                    font-size: .5em;
+                    font-weight: 700;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    justify-content: center;
+                    height: 80%;
+                    text-align: center;
+
+                    &__status-letter{
+                        font-size: 1.5em;
+
+                        &_assistant-in{
+                            color: $yellow-decorated
+                        }
+
+                        &_assistant-required{
+                            color: $orangeDecorated
+                        }
+
+                        &_doctor-in{
+                            color: $blue-decorated
+                        }
+
+                        &_doctor-required{
+                            color: $orangeDecorated
+                        }
+
+                        &_pacient-in{
+                            color: $greenDecorated
+                        }
+
+                        &_emergency{
+                            color: $redDecorated;
+                        }
+
+                        &_financial-in{
+                            color: $fioletDecorated
+                        }
+
+                        &_financial-required{
+                            color: $orangeDecorated
+                        }
+                    }
+
+                    &__status-icon{
+                        width: 3vw;
+                        height: 3vw;
+                        min-width: 60px;
+                        min-height: 60px;
+                        border-radius: 50%;
+                        border-width: 2px;
+                        border-style: solid;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        &_empty{
+                            border-color: $decoratedGrey;
+                        }
+
+                        &_patient-in{
+                            background-color: rgba($color: $greenDecorated, $alpha: .19);
+                            border-color: $greenDecorated;
+                        }
+
+                        &_assistant-required{
+                            background-color: rgba($color: $yellow-decorated, $alpha: .19);
+                            border-color:  $yellow-decorated;
+                        }
+
+                        &_assistant-in{
+                            background-color: rgba($color: $yellow-decorated, $alpha: .19);
+                            border-color:  $yellow-decorated;
+                        }
+
+                        &_financial-in{
+                            background-color: rgba($color: $fioletDecorated, $alpha: .19);
+                            border-color: $fioletDecorated;
+                        }
+
+                        &_financial-required{
+                            background-color: rgba($color: $fioletDecorated, $alpha: .19);
+                            border-color: $fioletDecorated;
+                        }
+
+                        &_doctor-in{
+                            background-color: rgba($color: $blue-decorated, $alpha: .19);
+                            color: $blue-decorated
+                        }
+
+                        &_emergency{
+                            background-color: rgba($color: $redDecorated, $alpha: .19);
+                            color: $redDecorated;
+                        }
+                    }
+
+                    &__status-message{
+                        margin-top: 10px;
+                    }
+                }
+
             }
         }
 
