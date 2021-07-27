@@ -28,7 +28,7 @@ export const Dashboard = () => {
                 />
                 <ul className={roomsCollectionClasses}>
                     <Room
-                        status={EnumRoomStatus.EMPTY}
+                        status={EnumRoomStatus.ASSISTANT_IN}
                         priorityIndex={EnumRoomPriorityIndexs.R}
                         name='1b'
                         timer={'00:00'}
@@ -42,14 +42,52 @@ export const Dashboard = () => {
                     />
 
                     <Room
-                        status={EnumRoomStatus.EMPTY}
+                        status={EnumRoomStatus.PATIENT_IN}
                         priorityIndex={EnumRoomPriorityIndexs.R}
                         name='1b'
                         timer={'00:00'}
                     />
 
                     <Room
-                        status={EnumRoomStatus.EMPTY}
+                        status={EnumRoomStatus.ASSISTANT_REQUIRED}
+                        priorityIndex={EnumRoomPriorityIndexs.R}
+                        name='1b'
+                        timer={'00:00'}
+                    />
+                </ul>
+            </DoctorLine>
+            <DoctorLine>
+                <DoctorControlPanel 
+                    fullName={'Benedict Cumberbatch'} 
+                    roleInHospital={'Therapist'}
+                    menuVisible={menuVisible}
+                    stopLineFunc={() => {}}
+                    resetFunc={() => {}}
+                />
+                <ul className={roomsCollectionClasses}>
+                    <Room
+                        status={EnumRoomStatus.FINANCIAL_IN}
+                        priorityIndex={EnumRoomPriorityIndexs.R}
+                        name='1b'
+                        timer={'00:00'}
+                    />
+
+                    <Room
+                        status={EnumRoomStatus.FINANCIAL_REQUIRED}
+                        priorityIndex={EnumRoomPriorityIndexs.R}
+                        name='1b'
+                        timer={'00:00'}
+                    />
+
+                    <Room
+                        status={EnumRoomStatus.EMERGENCY}
+                        priorityIndex={EnumRoomPriorityIndexs.R}
+                        name='1b'
+                        timer={'00:00'}
+                    />
+
+                    <Room
+                        status={EnumRoomStatus.DOCTOR_IN}
                         priorityIndex={EnumRoomPriorityIndexs.R}
                         name='1b'
                         timer={'00:00'}

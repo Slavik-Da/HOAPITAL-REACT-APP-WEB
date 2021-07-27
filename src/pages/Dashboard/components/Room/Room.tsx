@@ -1,6 +1,8 @@
 import React from 'react';
 import {RoomModel, EnumRoomStatus, EnumRoomPriorityIndexs} from '../../../../models/Room/roomModel';
 
+import {RoomStatusPicker} from './components/RoomStatusPicker';
+
 export const Room : React.FC<RoomModel> = ({
     name = '1b',
     status = EnumRoomStatus.EMPTY,
@@ -23,6 +25,9 @@ export const Room : React.FC<RoomModel> = ({
                     {timer}
                 </div>
             </div>
+            <RoomStatusPicker
+                status={status}
+            />
         </li>
     )
 }
