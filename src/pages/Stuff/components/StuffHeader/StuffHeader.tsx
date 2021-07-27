@@ -6,7 +6,7 @@ export const StuffHeader = () => {
                 <div className= "tab-line">
                     <div>Doctors</div>
                     <div className="tab-line__active">Assistants</div>
-                    <div>Receptionists</div>
+                    <div className="tab-line__active">Receptionists</div>
                 </div>
                 <button>Add new</button>
             </div>

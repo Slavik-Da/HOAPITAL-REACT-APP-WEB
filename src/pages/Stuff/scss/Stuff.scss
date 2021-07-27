@@ -15,7 +15,17 @@
             min-width: 50vw;
         
             &__active {
-                color:$greenDarkenDecorated
+                color:$greenDarkenDecorated;
+                position: relative;
+
+                &::after{
+                    position: absolute;
+                    top: 150%;
+                    left: 25%;
+                    width: 50%;
+                    border-bottom: 1px solid $greenDarkenDecorated;
+                    content: "";
+                }
             }
         }
     }
