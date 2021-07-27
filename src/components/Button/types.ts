@@ -1,6 +1,7 @@
 export enum EnumButtonsTypes {
     LIGTH_GREEN = 'LIGHT_GREEN' ,  
-    ORANGE_LONG = 'ORANGE_LONG'
+    ORANGE_LONG = 'ORANGE_LONG' ,
+    BIG_GREEN = 'BIG_GREEN'
 };
 
 export interface InterfaceButtonProps{

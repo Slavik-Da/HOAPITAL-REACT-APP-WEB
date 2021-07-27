@@ -3,7 +3,8 @@ import {InterfaceButtonProps, EnumButtonsTypes, TypeButtonClasses} from './types
 
 const buttonClasses : TypeButtonClasses  = {
     [EnumButtonsTypes.LIGTH_GREEN]: 'btn_light-green',
-    [EnumButtonsTypes.ORANGE_LONG]: 'btn_orange-long'
+    [EnumButtonsTypes.ORANGE_LONG]: 'btn_orange-long',
+    [EnumButtonsTypes.BIG_GREEN]: 'btn_big-green',
 };
 
 export const Button: React.FC<InterfaceButtonProps> = ({
@@ -30,6 +31,13 @@ export const Button: React.FC<InterfaceButtonProps> = ({
                         {text}
                     </a>
                 );
+            }
+            case EnumButtonsTypes.BIG_GREEN: {
+                return (
+                    <a className={btnStyles.join(' ')} onClick={onPressAction}>
+                        {text}
+                    </a>
+                )
             }
         }
     };

@@ -1,4 +1,6 @@
 import React from 'react';
+import { Button } from '../../../../components/Button/Button';
+import { EnumButtonsTypes } from '../../../../components/Button/types';
 
 export const StuffHeader = () => {
     return (
@@ -8,7 +10,11 @@ export const StuffHeader = () => {
                     <div className="tab-line__active">Assistants</div>
                     <div className="tab-line__active">Receptionists</div>
                 </div>
-                <button>Add new</button>
+                <Button 
+                type= {EnumButtonsTypes.BIG_GREEN}
+                text='Add new'
+                onPressAction = { () => {} }
+                />
             </div>
     )
 }
