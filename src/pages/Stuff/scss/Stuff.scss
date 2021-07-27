@@ -1,0 +1,10 @@
+.page-stuff {
+    display: grid;
+    min-height: 100% ;
+    grid-template-columns: 1fr;
+    gap: 10px 0;
+
+    .tab-line {
+        @include adaptiv-font(24, 15);
+    }
+}
