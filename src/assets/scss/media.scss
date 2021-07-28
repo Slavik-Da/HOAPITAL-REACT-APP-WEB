@@ -341,12 +341,17 @@
     .page-stuff{
 
         .pannel-header-line {
+            display: flex;
+            flex-wrap: wrap;
             &__add-new-btn{
-                line-height: 24px;
-                padding: .5em 2em;
+                margin-top: 7%;
+                text-align: center;
+                width: 100%;
+                line-height: 120%;
+                
             }
             .tab-line{
-                
+                min-width: 100%
             }
         }
     }
