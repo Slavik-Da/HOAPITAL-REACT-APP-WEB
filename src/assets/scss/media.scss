@@ -337,5 +337,19 @@
             }
         }
     }
+
+    .page-stuff{
+
+        .pannel-header-line {
+            &__add-new-btn{
+                line-height: 24px;
+                padding: .5em 2em;
+            }
+            .tab-line{
+                
+            }
+        }
+    }
+
 }
 

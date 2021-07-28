@@ -11,9 +11,10 @@ export const StuffHeader = () => {
                     <div className="tab-line__active">Receptionists</div>
                 </div>
                 <Button 
-                type= {EnumButtonsTypes.BIG_GREEN}
-                text='Add new'
-                onPressAction = { () => {} }
+                    type= {EnumButtonsTypes.BIG_GREEN}
+                    text='Add new'
+                    onPressAction = { () => {} }
+                    additionalStylesClassName={'pannel-header-line__add-new-btn'}
                 />
             </div>
     )
