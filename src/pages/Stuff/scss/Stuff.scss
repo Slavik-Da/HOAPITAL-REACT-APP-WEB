@@ -2,6 +2,7 @@
     min-height: 100% ;
     padding: 3% 4%;
     padding-bottom: 0;
+    @include adaptiv-font(18, 10);
 
     .pannel-header-line{
         display: flex;
@@ -11,7 +12,6 @@
         &__add-new-btn{
             line-height: 24px;
             padding: .5em 2em;
-            @include adaptiv-font(18, 10)
         }
 
         .tab-line {
@@ -19,7 +19,6 @@
             justify-content: space-between;
             width: 40%;
             min-width: 50vw;
-            @include adaptiv-font(18, 10);
         
             &__active {
                 color:$greenDarkenDecorated;
@@ -38,6 +37,6 @@
     }
 
     .stuff-items {
-        color: blue
+        color: blue;
     }
 }
