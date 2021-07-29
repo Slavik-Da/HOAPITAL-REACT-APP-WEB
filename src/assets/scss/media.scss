@@ -343,12 +343,11 @@
         .pannel-header-line {
             display: flex;
             flex-wrap: wrap;
+            
             &__add-new-btn{
                 margin-top: 7%;
                 text-align: center;
                 width: 100%;
-                line-height: 120%;
-                
             }
             .tab-line{
                 min-width: 100%

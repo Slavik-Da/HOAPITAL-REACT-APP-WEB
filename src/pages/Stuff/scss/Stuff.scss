@@ -20,17 +20,21 @@
             width: 40%;
             min-width: 50vw;
         
-            &__active {
-                color:$greenDarkenDecorated;
-                position: relative;
-
-                &::after{
-                    position: absolute;
-                    top: 150%;
-                    left: 25%;
-                    width: 50%;
-                    border-bottom: 1px solid $greenDarkenDecorated;
-                    content: "";
+            &__tab{
+                &_active {
+                    color:$greenDarkenDecorated;
+                    position: relative;
+    
+                    &::after{
+                        position: absolute;
+                        bottom: -40%;
+                        left: 50%;
+                        min-width: 22px;
+                        transform: translateX(-50%);
+                        width: 50%;
+                        border-bottom: 1px solid $greenDarkenDecorated;
+                        content: "";
+                    }
                 }
             }
         }
