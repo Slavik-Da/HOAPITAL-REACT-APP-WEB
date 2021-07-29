@@ -37,6 +37,10 @@
     }
 
     .stuff-items {
+        margin-top: 7%;
         color: blue;
+        .stuff-item {
+            background-color: blueviolet;
+        }
     }
 }
