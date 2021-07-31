@@ -6,7 +6,9 @@ export const Stuff = () => {
     return (
         <section className="page-stuff">
             <StuffHeader/>
-            <StuffItems/>
+            <StuffItems
+                arrayOfData={[]}
+            />
         </section>
     )
 }

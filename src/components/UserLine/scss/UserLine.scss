@@ -1,0 +1,19 @@
+.user-line{
+    display: flex;
+    color: #212121;
+    background-color: #FFFFFF;
+    margin-top: 1%;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+
+    .number{
+        background-color: $greenDarkenDecorated;
+        padding: 15px;
+        border-top-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+ 
+}
