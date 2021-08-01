@@ -49,6 +49,5 @@ export const UserLine : React.FC<InterfaceUserLine>  = ({
             }
         }
     };
-    
     return renderUserLine();
 }
