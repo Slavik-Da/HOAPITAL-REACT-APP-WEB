@@ -7,8 +7,9 @@ export interface InterfaceUserLine{
     alerts?: any[];
     roomsNames?: EnumRoomPriorityIndexs[]; 
     title?: string;
-    alertColor?: string,
-    type: EnumUserLineTypes
+    alertColor?: string;
+    type: EnumUserLineTypes;
+    additionalStylesClassName?: string;
 }
 
 export enum EnumUserLineTypes{
@@ -17,3 +18,5 @@ export enum EnumUserLineTypes{
     RECEPTIONISTS = 'RECEPTIONISTS',
     ROOM_STATUS_SETTINGS = 'ROOM_STATUS_SETTINGS'
 }   
+
+export type TypeUserLineClasses = {[Key in EnumUserLineTypes] : string};

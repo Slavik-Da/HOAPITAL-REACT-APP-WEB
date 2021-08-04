@@ -7,12 +7,28 @@
     border-bottom-right-radius: 20px;
     justify-content: space-between;
     align-items: center;
+   
+  
 
     .number{
         background-color: rgba($color: $greenDarkenDecorated, $alpha: 0.6);
         padding: 15px;
         border-top-left-radius: 20px;
         border-bottom-right-radius: 20px;
+    }
+   .info{
+       display: flex;
+       
+   }
+    .alert-icons {
+        display: flex;
+    }
+
+    .icons {
+        display: flex;
+        .icon {
+            margin-right: 15px;
+        }
     }
  
 }
