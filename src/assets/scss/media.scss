@@ -389,8 +389,11 @@
                     }
                     .rooms{
                         order:2;
-                        font-weight: bold;
+                        font-weight: 600;
                         font-size: 1.1em;
+                        .room-names{
+                            font-weight: 500;
+                        }
                     }
                     .icons {
                         justify-content: flex-end;
