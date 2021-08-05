@@ -24,6 +24,13 @@
         .user-line__name{     //name
             margin-left: 1%;
         }
+        
+        .user-line__item_hidden{
+            overflow: hidden;
+            white-space: nowrap;
+            padding-right: 3px;
+            text-overflow: ellipsis;
+        }
         .user-line__rooms{ ///rooms
             display: flex;
             flex-wrap: wrap;
@@ -35,15 +42,16 @@
     
     .user-line__alert-icons { // alert-icons
         display: flex;
+        padding-left: 3px;
     }
 
     .user-line__icons { // icons
         display: flex;
         .user-line__icon { //icon
-            margin: 0 5px;
+            margin-left: 5px;
         }
         &:last-child{
-            margin-right: 1%;
+            margin-right: 35px;
         }
     }
  

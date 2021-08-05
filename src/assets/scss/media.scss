@@ -379,7 +379,7 @@
                         font-size: 1.1em;
                     }
                     .user-line__email{
-                        order:2;
+                        order:2;    
                     }
                     .user-line__phone{
                         order:2;
@@ -400,6 +400,10 @@
                         order: 1;
                         .user-line__icon{
                             margin-right: 20px;
+                        }
+                        &:last-child{
+                            margin-right: 5%;
+
                         }
                     }
                 }

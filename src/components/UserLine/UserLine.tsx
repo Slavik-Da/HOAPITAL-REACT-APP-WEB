@@ -1,5 +1,6 @@
 import React from "react"
 import { EnumUserLineTypes, InterfaceUserLine, TypeUserLineClasses } from "../../models/UserLine/userLine"
+import { typedUseSelector } from "../../redux/store"
 import { AlertIcon } from "./components/AlertIcon"
 import { EnumIcons, Icon } from "./components/Icon"
 
@@ -21,7 +22,7 @@ const userLineClasses : TypeUserLineClasses = {
 
 export const UserLine : React.FC<InterfaceUserLine>  = ({
     name = 'Alex Sample',
-    email = 'alex@gmail.com',
+    email = 'alex@gmail.comggfdsgfhgdhgsfdhgsfdhgsfdgh',
     phoneNumber = '0632465077',
     alerts = [
         {id:1, color: "rgba(99, 191, 242, 1)", message:'Doctor in'},
@@ -36,6 +37,8 @@ export const UserLine : React.FC<InterfaceUserLine>  = ({
     additionalStylesClassName='',
     type = EnumUserLineTypes.ASSISTANTS 
 }) => {
+    const {menuVisible} = typedUseSelector(state => state.appState);
+
     const renderUserLine = () => {
         switch(type) {
             case EnumUserLineTypes.DOCTORS: {
@@ -44,8 +47,8 @@ export const UserLine : React.FC<InterfaceUserLine>  = ({
                         <div className='user-line__number'>1</div>
                         <div className="user-line__container ">
                             <div className='user-line__name' >{name}</div>
-                            <div className='user-line__email' >{email}</div>
-                            <div className='user-line__phone' >{phoneNumber}</div>
+                            <div className='user-line__email user-line__item_hidden' >{email}</div>
+                            <div className='user-line__phone '> {phoneNumber}</div>
                             <div className='user-line__alert-icons'>
                                 {alerts.map((elem)=>
                                     <AlertIcon key={elem.id} color={elem.color} message = {elem.message}/>
@@ -66,7 +69,7 @@ export const UserLine : React.FC<InterfaceUserLine>  = ({
                         <div className='user-line__number'>1</div>
                         <div className="user-line__container">
                             <div className='user-line__name'>{name}</div>
-                            <div className='user-line__email'>{email}</div>
+                            <div className='user-line__email user-line__item_hidden'>{email}</div>
                             <div className='user-line__phone'>{phoneNumber}</div>
                             <Icon type={EnumIcons.ASSISTANTS}/>
                         </div>
@@ -80,7 +83,7 @@ export const UserLine : React.FC<InterfaceUserLine>  = ({
                         <div className='user-line__number'>1</div>
                         <div className="user-line__container">
                             <div className='user-line__name'>{name}</div>
-                            <div className='user-line__email'>{email}</div>
+                            <div className='user-line__email user-line__item_hidden'>{email}</div>
                             <div className='user-line__phone'>{phoneNumber}</div>
                             <Icon type={EnumIcons.RECEPTIONISTS}/>
                         </div>
