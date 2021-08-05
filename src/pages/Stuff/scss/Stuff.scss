@@ -8,7 +8,6 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-
         &__add-new-btn{
             line-height: 24px;
             padding: .5em 2em;
@@ -18,7 +17,7 @@
             display: flex;
             justify-content: space-between;
             width: 40%;
-            min-width: 50vw;
+            min-width: 40vw;
         
             &__tab{
                 &_active {
