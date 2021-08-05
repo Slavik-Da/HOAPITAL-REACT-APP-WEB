@@ -24,6 +24,13 @@
         .name{
             margin-left: 1%;
         }
+        .rooms{
+            display: flex;
+            flex-wrap: wrap;
+            .room-numbers{
+                padding-left: 5px;
+            }
+        }
     }
     
 

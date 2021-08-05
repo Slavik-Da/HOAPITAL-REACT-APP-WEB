@@ -5,7 +5,7 @@ export interface InterfaceUserLine{
     email?: string;
     phoneNumber?: string;
     alerts?: any[];
-    roomsNames?: EnumRoomPriorityIndexs[]; 
+    roomsNames?: any[]; 
     title?: string;
     alertColor?: string;
     type: EnumUserLineTypes;
