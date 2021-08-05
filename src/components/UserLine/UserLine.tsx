@@ -17,7 +17,8 @@ const userLineClasses : TypeUserLineClasses = {
     [EnumUserLineTypes.RECEPTIONISTS] : 'line-receptionists',
     [EnumUserLineTypes.ROOM_STATUS_SETTINGS] : 'line-room_status',
 
-}
+};
+
 export const UserLine : React.FC<InterfaceUserLine>  = ({
     name,
     email,

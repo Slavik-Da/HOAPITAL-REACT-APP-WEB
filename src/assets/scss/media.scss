@@ -360,9 +360,12 @@
             .user-line {
                 font-size: 1.25em;
                 margin-bottom: 5%;
+                align-items: stretch
+                ;
                 .number {
                     display: flex;
                     flex-grow: 1;
+                    border-bottom-right-radius: 0;
                 }
                 .info__container{
                     padding: 20px 0;
