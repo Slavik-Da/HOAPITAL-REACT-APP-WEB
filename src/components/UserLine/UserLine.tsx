@@ -35,18 +35,17 @@ export const UserLine : React.FC<InterfaceUserLine>  = ({
                 return (
                     <div className='user-line'>
                         <div className='number'>1</div>
-                        <div>Alex Sample</div>
-                        <div>email@gmail.com</div>
-                        <div>0632465077</div>
-                        <div className='alert-icons'>
-                            {AlertIcons.map((elem)=>
-                                <AlertIcon key={elem.id} color={elem.color} message= {elem.message}/>
-                            )}
-                        </div>
-                        <div>Rooms 1a, 7b</div>
-                        <div className='icons'>
+                        <div className="info__container">
+                            <div className='name' >Alex Sample</div>
+                            <div>email@gmail.com</div>
+                            <div>0632465077</div>
+                            <div className='alert-icons'>
+                                {AlertIcons.map((elem)=>
+                                    <AlertIcon key={elem.id} color={elem.color} message = {elem.message}/>
+                                )}
+                            </div>
+                            <div>Rooms 1a, 7b</div>
                             <Icon type={EnumIcons.DOCTORS}/>
-                            
                         </div>
                     </div>
                 )
@@ -55,12 +54,13 @@ export const UserLine : React.FC<InterfaceUserLine>  = ({
                 return (
                     <div className='user-line'>
                         <div className='number'>1</div>
-                        <div>Alex Sample</div>
-                        <div>email@gmail.com</div>
-                        <div>0632465077</div>
-                        <div className='icons'>
+                        <div className="info__container">
+                            <div className='name' >Alex Sample</div>
+                            <div>email@gmail.com</div>
+                            <div>0632465077</div>
                             <Icon type={EnumIcons.ASSISTANTS}/>
                         </div>
+
                     </div>
                 )
             }
@@ -68,12 +68,13 @@ export const UserLine : React.FC<InterfaceUserLine>  = ({
                 return (
                     <div className='user-line'>
                         <div className='number'>1</div>
-                        <div>Alex Sample</div>
-                        <div>email@gmail.com</div>
-                        <div>0632465077</div>
-                        <div className='icons'>
+                        <div className="info__container">
+                            <div className='name' >Alex Sample</div>
+                            <div>email@gmail.com</div>
+                            <div>0632465077</div>
                             <Icon type={EnumIcons.RECEPTIONISTS}/>
                         </div>
+
                     </div>
                 )
             }
@@ -81,11 +82,12 @@ export const UserLine : React.FC<InterfaceUserLine>  = ({
                 return (
                     <div className="user-line">
                         <div className="number">1</div>
-                        <div>Doctor in</div>
-                        <div>alerts</div>
-                        <div className='icons'>
+                        <div className="info__container">
+                            <div  className='name' >Doctor in</div>
+                            <div>alerts</div>
                             <Icon type={EnumIcons.ROOM_STATUS_SETTINGS}/>
                         </div>
+                        
                     </div>
                 )
             }

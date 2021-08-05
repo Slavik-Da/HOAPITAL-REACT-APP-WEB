@@ -1,4 +1,3 @@
-import { on } from "cluster";
 import React from "react";
 import { ReactComponent as PencilIcon} from './img/Pencil.svg'
 import { ReactComponent as StethocopeIcon} from './img/Stethoscope.svg'
@@ -21,7 +20,7 @@ export const Icon: React.FC <InterfaceIcon> = ({type, onPressAction}) => {
         switch(type) {
             case EnumIcons.ASSISTANTS: 
             return(
-                <div>
+                <div className='icons'>
                     <StethocopeIcon className='icon' onClick={onPressAction}/>
                     <PencilIcon className='icon' onClick={onPressAction}/>
                     <TrashIcon className='icon' onClick={onPressAction}/>
@@ -30,7 +29,7 @@ export const Icon: React.FC <InterfaceIcon> = ({type, onPressAction}) => {
 
             case EnumIcons.DOCTORS:
                 return(
-                    <div>
+                    <div className='icons'>
                         <PencilIcon className='icon' onClick={onPressAction}/>
                         <TrashIcon className='icon' onClick={onPressAction}/>
                     </div> 
@@ -38,7 +37,7 @@ export const Icon: React.FC <InterfaceIcon> = ({type, onPressAction}) => {
                 
                 case EnumIcons.RECEPTIONISTS:
                     return (
-                        <div>
+                        <div className='icons'>
                             <PencilIcon className='icon' onClick={onPressAction}/>
                             <TrashIcon className='icon' onClick={onPressAction}/>
                         </div>
@@ -46,7 +45,7 @@ export const Icon: React.FC <InterfaceIcon> = ({type, onPressAction}) => {
 
                     case EnumIcons.ROOM_STATUS_SETTINGS:
                         return (
-                            <div>
+                            <div className='icons'>
                                 <PencilIcon className='icon' onClick={onPressAction}/>
                             </div>
                         )
