@@ -355,6 +355,50 @@
             }
         }
 
+        .stuff-items{
+            
+            .user-line {
+                font-size: 1.25em;
+                margin-bottom: 5%;
+                .number {
+                    display: flex;
+                    flex-grow: 1;
+                }
+                .info__container{
+                    padding: 20px 0;
+                    line-height: 2em;
+                    flex-direction: column;
+                    margin-left: 2%;
+                    .name{
+                        margin: 0;
+                        order: 2;
+                        font-weight: bold;
+                        font-size: 1.1em;
+                    }
+                    .email{
+                        order:2;
+                    }
+                    .phone{
+                        order:2;
+                    }
+                    .alert-icons{
+                        order:3;
+                    }
+                    .rooms{
+                        order:2;
+                        font-weight: bold;
+                        font-size: 1.1em;
+                    }
+                    .icons {
+                        justify-content: flex-end;
+                        order: 1;
+                        .icon{
+                            margin-right: 20px;
+                        }
+                    }
+                }
+            }
+        }
     }
 
 

@@ -6,9 +6,7 @@
     border-top-left-radius: 20px;
     border-bottom-right-radius: 20px;
     font-size: .85em;
-
     align-items: center;
-
     .number{
         background-color: rgba($color: $greenDarkenDecorated, $alpha: 0.6);
         padding: 15px;
@@ -31,7 +29,6 @@
     }
 
     .icons {
-        background-color: black;
         display: flex;
         .icon {
             margin: 0 5px;
