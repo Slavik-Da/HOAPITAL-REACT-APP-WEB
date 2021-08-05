@@ -20,33 +20,33 @@ export const Icon: React.FC <InterfaceIcon> = ({type, onPressAction}) => {
         switch(type) {
             case EnumIcons.ASSISTANTS: 
             return(
-                <div className='icons'>
-                    <StethocopeIcon className='icon' onClick={onPressAction}/>
-                    <PencilIcon className='icon' onClick={onPressAction}/>
-                    <TrashIcon className='icon' onClick={onPressAction}/>
+                <div className='user-line__icons'>
+                    <StethocopeIcon className='user-line__icon' onClick={onPressAction}/>
+                    <PencilIcon className='user-line__icon' onClick={onPressAction}/>
+                    <TrashIcon className='user-line__icon' onClick={onPressAction}/>
                 </div>
             )
 
             case EnumIcons.DOCTORS:
                 return(
-                    <div className='icons'>
-                        <PencilIcon className='icon' onClick={onPressAction}/>
-                        <TrashIcon className='icon' onClick={onPressAction}/>
+                    <div className='user-line__icons'>
+                        <PencilIcon className='user-line__icon' onClick={onPressAction}/>
+                        <TrashIcon className='user-line__icon' onClick={onPressAction}/>
                     </div> 
                 )
                 
                 case EnumIcons.RECEPTIONISTS:
                     return (
-                        <div className='icons'>
-                            <PencilIcon className='icon' onClick={onPressAction}/>
-                            <TrashIcon className='icon' onClick={onPressAction}/>
+                        <div className='user-line__icons'>
+                            <PencilIcon className='user-line__icon' onClick={onPressAction}/>
+                            <TrashIcon className='user-line__icon' onClick={onPressAction}/>
                         </div>
                     )
 
                     case EnumIcons.ROOM_STATUS_SETTINGS:
                         return (
-                            <div className='icons'>
-                                <PencilIcon className='icon' onClick={onPressAction}/>
+                            <div className='user-line__icons'>
+                                <PencilIcon className='user-line__icon' onClick={onPressAction}/>
                             </div>
                         )
         }

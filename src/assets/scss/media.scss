@@ -362,43 +362,43 @@
                 margin-bottom: 5%;
                 align-items: stretch
                 ;
-                .number {
+                .user-line__number {
                     display: flex;
                     flex-grow: 1;
                     border-bottom-right-radius: 0;
                 }
-                .info__container{
+                .user-line__container{
                     padding: 20px 0;
                     line-height: 2em;
                     flex-direction: column;
                     margin-left: 2%;
-                    .name{
+                    .user-line__name{
                         margin: 0;
                         order: 2;
                         font-weight: bold;
                         font-size: 1.1em;
                     }
-                    .email{
+                    .user-line__email{
                         order:2;
                     }
-                    .phone{
+                    .user-line__phone{
                         order:2;
                     }
-                    .alert-icons{
+                    .user-line__alert-icons{
                         order:3;
                     }
-                    .rooms{
+                    .user-line__rooms{
                         order:2;
                         font-weight: 600;
                         font-size: 1.1em;
-                        .room-names{
+                        .user-line__room-numbers{
                             font-weight: 500;
                         }
                     }
-                    .icons {
+                    .user-line__icons {
                         justify-content: flex-end;
                         order: 1;
-                        .icon{
+                        .user-line__icon{
                             margin-right: 20px;
                         }
                     }

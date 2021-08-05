@@ -41,19 +41,19 @@ export const UserLine : React.FC<InterfaceUserLine>  = ({
             case EnumUserLineTypes.DOCTORS: {
                 return (
                     <div className='user-line'>
-                        <div className='number'>1</div>
-                        <div className="info__container">
-                            <div className='name' >{name}</div>
-                            <div className='email' >{email}</div>
-                            <div className='phone' >{phoneNumber}</div>
-                            <div className='alert-icons'>
+                        <div className='user-line__number'>1</div>
+                        <div className="user-line__container ">
+                            <div className='user-line__name' >{name}</div>
+                            <div className='user-line__email' >{email}</div>
+                            <div className='user-line__phone' >{phoneNumber}</div>
+                            <div className='user-line__alert-icons'>
                                 {alerts.map((elem)=>
                                     <AlertIcon key={elem.id} color={elem.color} message = {elem.message}/>
                                 )}
                             </div>
-                            <div className='rooms' >
-                                <div className="room">Rooms </div>
-                                    <div className="room-numbers">{roomsNames.map((n)=>n +' ')}</div>
+                            <div className='user-line__rooms' >
+                                <div className="user-line__room">Rooms </div>
+                                    <div className="user-line__room-numbers">{roomsNames.map((n)=>n +' ')}</div>
                                 </div>
                             <Icon type={EnumIcons.DOCTORS}/>
                         </div>
@@ -63,11 +63,11 @@ export const UserLine : React.FC<InterfaceUserLine>  = ({
             case EnumUserLineTypes.ASSISTANTS: {
                 return (
                     <div className='user-line'>
-                        <div className='number'>1</div>
-                        <div className="info__container">
-                            <div className='name'>{name}</div>
-                            <div className='email'>{email}</div>
-                            <div className='phone'>{phoneNumber}</div>
+                        <div className='user-line__number'>1</div>
+                        <div className="user-line__container">
+                            <div className='user-line__name'>{name}</div>
+                            <div className='user-line__email'>{email}</div>
+                            <div className='user-line__phone'>{phoneNumber}</div>
                             <Icon type={EnumIcons.ASSISTANTS}/>
                         </div>
 
@@ -77,11 +77,11 @@ export const UserLine : React.FC<InterfaceUserLine>  = ({
             case EnumUserLineTypes.RECEPTIONISTS: {
                 return (
                     <div className='user-line'>
-                        <div className='number'>1</div>
-                        <div className="info__container">
-                            <div className='name'>{name}</div>
-                            <div className='email'>{email}</div>
-                            <div className='phone'>{phoneNumber}</div>
+                        <div className='user-line__number'>1</div>
+                        <div className="user-line__container">
+                            <div className='user-line__name'>{name}</div>
+                            <div className='user-line__email'>{email}</div>
+                            <div className='user-line__phone'>{phoneNumber}</div>
                             <Icon type={EnumIcons.RECEPTIONISTS}/>
                         </div>
 
@@ -91,9 +91,9 @@ export const UserLine : React.FC<InterfaceUserLine>  = ({
             case EnumUserLineTypes.ROOM_STATUS_SETTINGS: {
                 return (
                     <div className="user-line">
-                        <div className="number">1</div>
-                        <div className="info__container">
-                            <div  className='name' >Doctor in</div>
+                        <div className="user-line__number">1</div>
+                        <div className="user-line__container">
+                            <div  className='user-line__name' >Doctor in</div>
                             <div>alerts</div>
                             <Icon type={EnumIcons.ROOM_STATUS_SETTINGS}/>
                         </div>
